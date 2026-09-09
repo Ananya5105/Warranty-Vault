@@ -71,3 +71,8 @@ The project uses:
 ## Author
 
 Ananya Dubey
+## Project Status
+
+This project is being developed as part of the DevOps 
+Practices and Principles coursework.
+
