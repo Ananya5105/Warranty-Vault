@@ -44,7 +44,7 @@ class TestWarrantyVault(unittest.TestCase):
     def test_index_has_html_structure(self):
         content = (ROOT / "index.html").read_text(encoding="utf-8").lower()
         self.assertIn("<html", content)
-        self.assertIn("<body", content)
+        self.assertIn("<body-INTENTIONAL-FAIL", content)
         self.assertIn("</html>", content)
 
 
