@@ -48,5 +48,13 @@ class TestWarrantyVault(unittest.TestCase):
         self.assertIn("</html>", content)
 
 
+    def test_html_pages_have_title(self):
+        html_files = list(ROOT.rglob("*.html"))
+        for html_file in html_files:
+            with self.subTest(html_file=html_file):
+                content = html_file.read_text(encoding="utf-8").lower()
+                self.assertIn("<title", content)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
